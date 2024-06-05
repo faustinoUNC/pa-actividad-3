@@ -2,18 +2,14 @@
 { 
     internal class Program
     {
-        //Uso de variables globales para que puedan ser accedidas desde cualquier parte del programa
-        private static int opcionIngresada;
-        private static bool opcionValida = false;
-
-
-
         static void Main(string[] args)
         {
 
             //Renderizar el menu
-           
             RenderizarMenu();
+
+            //Obtener la opcion seleccionada
+            int opcionIngresada = RenderizarMenu();
 
             //Ejecutar la opcion seleccionada
             switch (opcionIngresada)
@@ -125,6 +121,8 @@
         //FUNCIONES
         static int RenderizarMenu()
         {
+            bool opcionValida = false;
+            int opcionIngresada = 0;
 
             Console.WriteLine("****************************************************************");
             Console.WriteLine("");
