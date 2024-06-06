@@ -5,10 +5,11 @@
         static void Main(string[] args)
         {
             int opcionIngresada;
+
             do
             {
                 opcionIngresada = RenderizarMenu();
-
+                
                 //Ejecutar la opcion seleccionada
                 switch (opcionIngresada)
                 {
@@ -152,7 +153,6 @@
                 if (opcionIngresada == 4)
                 {
                     Console.WriteLine("Gracias por usar el programa");
-                    break;
                 }
 
             } while (!opcionValida);
@@ -175,13 +175,13 @@
 
                 if (respuesta == "si")
                 {
-                   Console.Clear(); 
-
+                   Console.Clear();
                 }
                 else if (respuesta == "no")
                 {
                     Console.Clear();
                     Console.WriteLine("Gracias por usar el programa");
+                    Environment.Exit(0);
                 }
                 else
                 {
